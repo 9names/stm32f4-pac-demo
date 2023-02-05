@@ -1,0 +1,12 @@
+[package]
+name = "test-app"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+stm32f4 = { path = "../stm32f4", features = ["rt", "critical-section"] }
+embedded-hal = { version="0.2.7", features = ["unproven"] }
+panic-halt = "0.2.0"
+cortex-m-rt = "0.7.2"
